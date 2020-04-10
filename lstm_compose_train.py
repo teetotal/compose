@@ -145,8 +145,11 @@ callbacks_list = [
     , checkpoint2
     , early_stopping
  ]
-
-model.save_weights(os.path.join(weights_folder, "weights.h5"))
+if mode == 'build':
+    model.save_weights(os.path.join(weights_folder, "weights.h5"))
+else:
+    model.load_weights(os.path.join(weights_folder, "weights.h5"))
+    
 model.fit(network_input, network_output
           , epochs=2000000, batch_size=32
           , validation_split = 0.2
