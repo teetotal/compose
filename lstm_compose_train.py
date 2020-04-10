@@ -112,7 +112,7 @@ print(network_output[1][0])
 model, att_model = create_network(n_notes, n_durations, embed_size, rnn_units, use_attention)
 model.summary()
 
-plot_model(model, to_file=os.path.join(run_folder ,'viz/model.png'), show_shapes = True, show_layer_names = True)
+#plot_model(model, to_file=os.path.join(run_folder ,'viz/model.png'), show_shapes = True, show_layer_names = True)
 
 weights_folder = os.path.join(run_folder, 'weights')
 weights_folder = os.path.join(run_folder, 'weights')
