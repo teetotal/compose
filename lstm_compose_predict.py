@@ -6,7 +6,7 @@ import sys
 from music21 import instrument, note, stream, chord, duration
 from models.RNNAttention import create_network, sample_with_temp
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 # run params
 section = 'compose'
 run_id = '0006'
