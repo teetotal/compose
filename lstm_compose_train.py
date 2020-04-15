@@ -10,8 +10,8 @@ from models.RNNAttention import get_distinct, create_lookups, prepare_sequences,
 
 # run params
 section = 'compose'
-run_id = '0006'
-music_name = 'cello'
+run_id = '0001'
+music_name = 'k-hiphop'
 
 run_folder = 'run/{}/'.format(section)
 run_folder += '_'.join([run_id, music_name])
@@ -141,9 +141,9 @@ early_stopping = EarlyStopping(
 
 
 callbacks_list = [
-    checkpoint1
-    , checkpoint2
-    , early_stopping
+    #checkpoint1, 
+    checkpoint2, 
+    early_stopping
  ]
 if mode == 'build':
     model.save_weights(os.path.join(weights_folder, "weights.h5"))
